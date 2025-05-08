@@ -1,0 +1,37 @@
+:root{
+    --font-size: 18px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1500px;
+    --color: rgb(255, 254, 254);
+    --background-color: #00568f;
+    --height: 40px;
+    --font-color: #337ab7;
+}
+
+
+.table__head {
+    background-color: var(--background-color) !important;
+    color: var(--color);
+}
+
+
+.table {
+    border-collapse: collapse;
+}
+
+.table__body-cell, .table__head-cell {
+    border: 1px solid gray;
+}
+
+
+.table__body > .table__body-row:nth-child(2) > .table__body-cell:nth-child(2) {
+    border: none;
+}
+
+
+.main__select > select {
+    padding:10px;
+    font-size: var(--font-size);
+}
+
+

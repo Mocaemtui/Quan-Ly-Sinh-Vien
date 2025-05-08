@@ -1,0 +1,93 @@
+:root{
+    --font-size: 18px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1500px;
+    --color: rgb(255, 254, 254);
+    --background-color: #00568f;
+    --height: 40px;
+    --font-color: #337ab7;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: 0px auto;
+    font-size: var(--font-size);
+    font-family:var(--font-family);
+    gap:15px;
+}
+
+li{
+    list-style: none;  
+}
+li > a{
+    text-decoration: none;
+    margin : 0px 5px;   
+    color:var(--color); 
+}
+
+.content{
+    display: flex;
+    gap:20px;
+    width: 100%;
+}
+
+.content__main{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+span > a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+div > a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+div > a:hover{
+    font-weight: 600;
+}
+
+
+@media (max-width: 800px){
+    .content{
+        flex-direction: column;
+    } 
+}
+
+
+/* Thời khóa biểu */
+.content-main__select {
+    display: flex;
+}
+
+.select-item {
+    margin: 0px 10px;
+}
+
+.select-item > select {
+    padding: 10px;
+}
+
+/* Table */
+.content-main__grade-table > table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.content-main__grade-table > table > thead {
+    background-color: #ddd;
+}
+
+.content-main__grade-table > table  th, 
+.content-main__grade-table > table  td {
+    border: 2px solid black;
+}
+
+

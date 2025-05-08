@@ -1,0 +1,43 @@
+.header__image {
+    width: 100%;
+    max-width: var(--max-width); 
+    height: auto; 
+}
+
+.header__nav {
+    height:40px;
+    background-color: var(--background-color);
+    display:flex;
+    justify-content:space-between;
+}
+
+.header__nav-left, .header__nav-right {
+    display:flex;
+    padding:8px 0;
+    list-style:none;
+}
+
+.header__nav-left li {
+    padding-left: 25px;
+}
+
+.header__nav-right li {
+    padding-right: 15px;
+}
+.header a {
+    text-decoration: none;
+}
+
+.header a{
+    color: var(--color);
+}
+
+.header a:hover {
+    color: var(--font-color);
+}
+
+@media only screen and (max-width: 900px) {
+    .header__nav ul {
+        display:none;
+    }
+}
