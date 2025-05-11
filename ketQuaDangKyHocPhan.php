@@ -26,28 +26,24 @@
                                 <th>Ngày đăng ký</th>
                             </thead>
                             <tbody>
-                            <?php
-            include("connectSQL.php");
+                            <?php include("connectSQL.php"); ?>
 
-            $sql = "SELECT * FROM KetQuaDangKyHocPhan";
-            $result = $conn->query($sql);
+                                <?php
+                                    $sql = "SELECT * FROM Ketquadangkyhocphan";
+                                    $result = $conn->query($sql);
+                                ?>
 
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['Stt'] . "</td>";
-                    echo "<td>" . $row['Mahocphan'] . "</td>";
-                    echo "<td>" . $row['Tenhocphan'] . "</td>";
-                    echo "<td>" . $row['STC'] . "</td>";
-                    echo "<td>" . $row['Ngaydangky'] . "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='8'>Không có dữ liệu</td></tr>";
-            }
+                                <?php while($row = $result->fetch_assoc()): ?>
+                                    <tr>
+                                        <td><?php echo $row['Stt']; ?></td>
+                                        <td><?php echo $row['Mahocphan']; ?></td>
+                                        <td><?php echo $row['Tenhocphan']; ?></td>
+                                        <td><?php echo $row['STC']; ?></td>
+                                        <td><?php echo $row['Ngaydangky']; ?></td>
 
-            $conn->close();
-        ?>
+                                    </tr>
+
+                                <?php endwhile; ?>  
                             </tbody>
                         </table>
                     </fieldset>
